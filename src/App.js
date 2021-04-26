@@ -1,23 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import StickyFooter from './Components/StickyFooter';
+import Album from './Components/Album';
+// import SignIn from './Components/SignIn';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {/* <SignIn /> */}
+      <Album Heading="Photo Album" SubContent="Something short and leading about the collection below—its contents, the creator, etc.
+              Make it short and sweet, but not too short so folks don&apos;t simply skip over it
+              entirely." />
+      <StickyFooter/>
     </div>
   );
 }
