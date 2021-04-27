@@ -3,6 +3,16 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import Album from './Components/Album';
+import SignIn from './Components/SignIn';
+import StickyFooter from './Components/StickyFooter';
+
+module.exports = {
+  App,
+  Album,
+  SignIn,
+  StickyFooter
+}
 
 ReactDOM.render(
   <React.StrictMode>
