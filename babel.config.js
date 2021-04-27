@@ -1,4 +1,4 @@
 // eslint-disable-next-line import/no-anonymous-default-export
-export default {
+module.exports = {
     "presets": ["@babel/preset-env", "@babel/preset-react"]
 };
