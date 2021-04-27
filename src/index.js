@@ -7,7 +7,7 @@ import Album from './Components/Album';
 import SignIn from './Components/SignIn';
 import StickyFooter from './Components/StickyFooter';
 
-module.exports = {
+export {
   App,
   Album,
   SignIn,
