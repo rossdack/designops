@@ -51,7 +51,7 @@ const Album = ({ Heading, SubContent }) => {
   const classes = useStyles();
 
   return (
-    <React.Fragment>
+    <div>
       <CssBaseline />
       <AppBar position="relative">
         <Toolbar>
@@ -104,7 +104,7 @@ const Album = ({ Heading, SubContent }) => {
           </Grid>
         </Container>
       </main>
-    </React.Fragment>
+    </div>
   );
 }
 
