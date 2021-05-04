@@ -1,25 +1,24 @@
 name: Deploy to GitHub Pages
+
 on:
-  push:
-    branches:
-      - master
+    push:
+        branches:
+            - master
+
 jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@master
-      - name: install, build, and test
-        run: |
-          yarn install
-          yarn lint
-          yarn build
-          yarn test
-        env:
-          CI: true
-      - name: Deploy to production
-        uses: awb-pw/deploy-to-github-pages-action@1.1.1
-        env:
-          AUTHOR: ashwinm
-          BUILD_PATH: public
-          GITHUB_PAGE_NAME: ashwin-rxp.github.io
-          PA_TOKEN: ${{ secrets.PA_TOKEN }}
+    build-and-deploy:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@master
+
+            - name: Build and Deploy
+              uses: ./.github/actions/deploy
+              env:
+                  COMMIT_EMAIL: ashwin.mendon@rxpservices.com.au
+                  COMMIT_NAME: ashwinm
+                  ACCESS_TOKEN: ${{ secrets.PA_TOKEN }}
+                  BASE_BRANCH: master
+                  DEPLOY_BRANCH: gh-pages
+                  BUILD_SCRIPT: npm install && npm run build
+                  FOLDER: build
