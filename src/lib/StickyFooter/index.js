@@ -46,7 +46,7 @@ export default function StickyFooter ({copyright, footerText, position='center',
       <CssBaseline />
       <footer className={classNames(classes.footer, classes[position])}>
         <Container fullWidth>
-          <Typography variant="body1">{footerText ? footerText : 'DesignOps Project'}</Typography>
+          <Typography variant="body1">{footerText ? footerText : 'RXP DesignOps Project'}</Typography>
           {children}
           <Copyright copyright={copyright}/>
         </Container>
