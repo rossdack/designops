@@ -4,7 +4,7 @@ import {StickyFooter} from "../node_modules/designops/dist/index.js";
 const StickyFooterDemo = () => {
     return(
         <>
-        <StickyFooter copyright={\`@${new Date().getFullYear()} RXP Group - Part of Capegemini. All rights reserved\`}
+        <StickyFooter copyright={\`@${new Date().getFullYear()} RXP Group - Part of Capgemini. All rights reserved\`}
          footerText='Creative agency making happier humans.' position={'left'}>
             <div>  
             </div>
