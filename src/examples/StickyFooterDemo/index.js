@@ -15,8 +15,6 @@ const StickyFooterDemo = () => {
         <>
         <StickyFooter copyright={`@${new Date().getFullYear()} RXP Group - Part of Capgemini. All rights reserved`}
          footerText='Creative agency making happier humans.' position={'left'}>
-            <div>  
-            </div>
         </StickyFooter>
         <div className={classes.div}>
             <CodeSnippet code={stickyFooterCode}/>
