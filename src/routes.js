@@ -3,7 +3,11 @@
  const ROUTES=[
     {
         path:'/',
-        name:'Color palette',
+        name:'Color Palette',
+    },
+    {
+        path:'/fontsize',
+        name:'Font Sizes',
     },
     {
         path:'/signin',

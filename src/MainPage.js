@@ -3,7 +3,7 @@ import {Switch,Route} from "react-router-dom";
 import { makeStyles } from '@material-ui/core/styles';
 import {AppBar, CssBaseline, Toolbar, Typography} from '@material-ui/core';
 import NavigationBar from './NavigationBar'
-import {CustomModalDemo, CustomCardDemo, SignInDemo, StickyFooterDemo, ColorPalette} from './examples';
+import {CustomModalDemo, CustomCardDemo, SignInDemo, StickyFooterDemo, ColorPalette, FontSizeDemo} from './examples';
 import './index.css';
 
 
@@ -42,7 +42,9 @@ const MainPage = (props) =>{
         <main className={classes.content}>
           <Toolbar />
           <Switch>
-          <Route path='/' exact component={ColorPalette} {...props}/>
+            <Route path='/' exact component={ColorPalette} {...props}/>
+            <Route path='/fontsize' exact component={FontSizeDemo} {...props}/>
+            <Route path='/designops' exact component={ColorPalette} {...props}/>
             <Route path='/signin' exact component={SignInDemo} {...props}/>
             <Route path='/stickyfooter' component={StickyFooterDemo} {...props}/>
             <Route path='/modal' component={CustomModalDemo} {...props}/>

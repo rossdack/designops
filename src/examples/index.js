@@ -3,4 +3,5 @@ import CustomCardDemo from './CustomCardDemo';
 import SignInDemo from './SignInDemo';
 import StickyFooterDemo from './StickyFooterDemo';
 import ColorPalette from './ColorPalette';
-export { CustomModalDemo, CustomCardDemo, SignInDemo, StickyFooterDemo, ColorPalette};
+import FontSizeDemo from './FontSizeDemo'
+export { CustomModalDemo, CustomCardDemo, SignInDemo, StickyFooterDemo, ColorPalette, FontSizeDemo};

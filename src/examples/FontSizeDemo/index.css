@@ -1,0 +1,33 @@
+.fontsizes table, td, th {
+    border: 1px solid rgb(179, 179, 179);
+    padding: 0;
+  }
+  
+  .fontsizes  table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 1024px;
+    margin: auto;
+  }
+  .fontsizes td:first-child {
+    width: 15%;
+  }
+  .fontsizes td {
+    padding: 1rem;
+  }
+  .fontsizes .box{
+    height: 40px;
+    width: 100%;
+  }
+  .fontsizes tr>th{
+    height: 50px;
+  }
+  .fontsizes .width12{
+    width: 12%;
+  }
+  .fontsizes .ellipses{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 500px;
+  }
