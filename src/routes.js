@@ -3,6 +3,10 @@
  const ROUTES=[
     {
         path:'/',
+        name:'Color palette',
+    },
+    {
+        path:'/signin',
         name:'SignIn Page',
     },
     {
