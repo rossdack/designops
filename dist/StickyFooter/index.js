@@ -89,7 +89,7 @@ function StickyFooter(_ref2) {
         _react2.default.createElement(
           _Typography2.default,
           { variant: 'body1' },
-          footerText ? footerText : 'RXP DesignOps Project'
+          footerText ? footerText : 'RXP DesignOps Demo Project'
         ),
         children,
         _react2.default.createElement(Copyright, { copyright: copyright })
