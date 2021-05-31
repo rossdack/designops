@@ -22,7 +22,9 @@ const useStyles = makeStyles((theme) => ({
     backgroundImage: 'url(https://source.unsplash.com/random)',
     backgroundRepeat: 'no-repeat',
     backgroundColor:
-      theme.palette.type === 'light' ? theme.palette.grey[50] : theme.palette.grey[900],
+      theme.palette.type === 'light'
+        ? theme.palette.grey[50]
+        : theme.palette.grey[900],
     backgroundSize: 'cover',
     backgroundPosition: 'center',
   },
@@ -45,7 +47,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function SignInSide({firstLabel}) {
+export default function SignInSide({ firstLabel }) {
   const classes = useStyles();
 
   return (
@@ -67,7 +69,7 @@ export default function SignInSide({firstLabel}) {
               required
               fullWidth
               id="email"
-              label={firstLabel ? firstLabel : "Email Address"}
+              label={firstLabel ? firstLabel : 'Email Address'}
               name="email"
               autoComplete="email"
               autoFocus
@@ -92,8 +94,7 @@ export default function SignInSide({firstLabel}) {
               fullWidth
               variant="contained"
               color="primary"
-              className={classes.submit}
-            >
+              className={classes.submit}>
               Sign In
             </Button>
             <Grid container>
