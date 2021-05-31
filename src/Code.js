@@ -1,6 +1,6 @@
-import React, { useEffect } from "react";
-import Prism from "prismjs";
-import "prismjs/themes/prism-tomorrow.css";
+import React, { useEffect } from 'react';
+import Prism from 'prismjs';
+import 'prismjs/themes/prism-tomorrow.css';
 
 export default function Code({ code, language }) {
   useEffect(() => {
@@ -8,7 +8,7 @@ export default function Code({ code, language }) {
   }, []);
 
   return (
-    <div className='codeDiv'>
+    <div className="codeDiv">
       <pre>
         <code className={`language-${language}`}>{code}</code>
       </pre>
