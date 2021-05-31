@@ -6,7 +6,6 @@ on:
       - main
   workflow_dispatch:
 
-
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -25,3 +24,16 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.PA_TOKEN }}
       - run: |
           curl -XPOST -u "${{ secrets.PA_USERNAME}}:${{secrets.PA_TOKEN}}" -H "Accept: application/vnd.github.everest-preview+json" -H "Content-Type: application/json" https://api.github.com/repos/Ashwin-RXP/demoproj/dispatches --data '{"event_type": "build_application"}'
+      - name: Send Teams Notification
+        if: success()
+        uses: aliencube/microsoft-teams-actions@v0.8.0
+        with:
+          webhook_uri: ${{ secrets.TEAMS_WEBHOOK }}
+          title: ${{ github.event.head_commit.message }}
+          summary: Design Ops new Release deployed
+          text: Commit Url ${{ github.event.head_commit.url }}
+      - name: Send Email Notification
+        if: success()
+        run: |
+          sudo apt-get install mailutils 
+          echo "Commit: ${{ github.event.head_commit.url }} " | mailx -s "${{ github.event.head_commit.message }}" -aFrom:${{ secrets.EMAIL_USERNAME }} ${{ secrets.EMAIL_LIST }}
