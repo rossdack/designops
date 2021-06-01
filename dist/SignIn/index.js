@@ -177,7 +177,7 @@ function SignInSide(_ref) {
               color: 'primary',
               className: classes.submit,
             },
-            'Sign In',
+            'Sign In-jin',
           ),
           _react2.default.createElement(
             _Grid2.default,
