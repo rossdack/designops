@@ -45,53 +45,54 @@ const useStyles = makeStyles((theme) => ({
 
 const cards = [
   {
-      id:1,
-      heading: 'Heading 1',
-      subheading:'I am Card 1'
+    id: 1,
+    heading: 'Heading 1',
+    subheading: 'I am Card 1',
   },
   {
-      id:2,
-      heading: 'Heading 2',
-      subheading:'I am Card 2'
+    id: 2,
+    heading: 'Heading 2',
+    subheading: 'I am Card 2',
   },
   {
-      id:3,
-      heading: 'Heading 3',
-      subheading:'I am Card 3'
+    id: 3,
+    heading: 'Heading 3',
+    subheading: 'I am Card 3',
   },
   {
-      id:4,
-      heading: 'Heading 4',
-      subheading:'I am Card 4'
+    id: 4,
+    heading: 'Heading 4',
+    subheading: 'I am Card 4',
   },
   {
-      id:5,
-      heading: 'Heading 5',
-      subheading:'I am Card 5'
+    id: 5,
+    heading: 'Heading 5',
+    subheading: 'I am Card 5',
   },
   {
-      id:6,
-      heading: 'Heading 6',
-      subheading:'I am Card 6'
+    id: 6,
+    heading: 'Heading 6',
+    subheading: 'I am Card 6',
   },
   {
-    id:7,
+    id: 7,
     heading: 'Heading 7',
-    subheading:'I am Card 7'
+    subheading: 'I am Card 7',
   },
   {
-      id:8,
-      heading: 'Heading 8',
-      subheading:'I am Card 8'
+    id: 8,
+    heading: 'Heading 8',
+    subheading: 'I am Card 8',
   },
   {
-      id:9,
-      heading: 'Heading 9',
-      subheading:'I am Card 9'
-  }];
+    id: 9,
+    heading: 'Heading 9',
+    subheading: 'I am Card 9',
+  },
+];
 
 const Album = (props) => {
-  const { 
+  const {
     Heading,
     SubContent,
     appBarClasses,
@@ -115,7 +116,7 @@ const Album = (props) => {
     editAction,
     img,
     cardsData,
-    } = props
+  } = props;
   const classes = useStyles();
   const cardArray = cardsData ? cardsData : cards;
   return (
@@ -124,7 +125,11 @@ const Album = (props) => {
       <AppBar position="relative" className={appBarClasses}>
         <Toolbar className={toolBarClasses}>
           <CameraIcon className={classNames(classes.icon, cameraIconClasses)} />
-          <Typography variant="h6" color="inherit" noWrap className={typographyClasses}>
+          <Typography
+            variant="h6"
+            color="inherit"
+            noWrap
+            className={typographyClasses}>
             Album layout
           </Typography>
         </Toolbar>
@@ -132,31 +137,52 @@ const Album = (props) => {
       <main>
         <div className={classNames(classes.heroContent, divClasses)}>
           <Container maxWidth="sm" className={containerClasses}>
-            <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom className={headingClasses}>
+            <Typography
+              component="h1"
+              variant="h2"
+              align="center"
+              color="textPrimary"
+              gutterBottom
+              className={headingClasses}>
               {Heading}
             </Typography>
-            <Typography variant="h5" align="center" color="textSecondary" paragraph className={contentClasses}>
-                {SubContent}
+            <Typography
+              variant="h5"
+              align="center"
+              color="textSecondary"
+              paragraph
+              className={contentClasses}>
+              {SubContent}
             </Typography>
           </Container>
         </div>
-        <Container className={classNames(classes.cardGrid, gridContainerClasses)} maxWidth="md">
+        <Container
+          className={classNames(classes.cardGrid, gridContainerClasses)}
+          maxWidth="md">
           <Grid container spacing={4} className={innerGridClasses}>
             {cardArray.map((card, index) => (
-              <Grid item key={card.id} xs={12} sm={6} md={4} className={gridClasses}>
-                <CustomCard headingClasses={headingClasses}
-                      contentClasses={contentClasses}
-                      cardClasses={cardClasses}
-                      cardMediaClasses={cardMediaClasses}
-                      cardContentClasses={cardContentClasses}
-                      cardActionClasses={cardActionClasses}
-                      viewButtonClasses={viewButtonClasses}
-                      editButtonClasses={editButtonClasses}
-                      viewAction={viewAction}
-                      editAction={editAction}
-                      cardHeading={card.heading}
-                      cardSubHeading={card.subheading}
-                      img={img}/>
+              <Grid
+                item
+                key={card.id}
+                xs={12}
+                sm={6}
+                md={4}
+                className={gridClasses}>
+                <CustomCard
+                  headingClasses={headingClasses}
+                  contentClasses={contentClasses}
+                  cardClasses={cardClasses}
+                  cardMediaClasses={cardMediaClasses}
+                  cardContentClasses={cardContentClasses}
+                  cardActionClasses={cardActionClasses}
+                  viewButtonClasses={viewButtonClasses}
+                  editButtonClasses={editButtonClasses}
+                  viewAction={viewAction}
+                  editAction={editAction}
+                  cardHeading={card.heading}
+                  cardSubHeading={card.subheading}
+                  img={img}
+                />
               </Grid>
             ))}
           </Grid>
@@ -164,6 +190,6 @@ const Album = (props) => {
       </main>
     </div>
   );
-}
+};
 
 export default Album;
