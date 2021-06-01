@@ -1,12 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter } from 'react-router-dom';
 import './index.css';
-import MainPage from './MainPage';
+import MainPage from '@/pages/MainPage';
+import { Router } from 'react-router-dom';
+import { createBrowserHistory } from 'history';
+import { CssBaseline } from '@material-ui/core';
 
 ReactDOM.render(
-  <BrowserRouter>
+  <Router history={createBrowserHistory()}>
+    <CssBaseline />
     <MainPage />
-  </BrowserRouter>,
+  </Router>,
   document.getElementById('root'),
 );

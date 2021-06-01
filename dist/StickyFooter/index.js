@@ -1,7 +1,7 @@
 
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
+Object.defineProperty(exports, '__esModule', {
+  value: true,
 });
 exports.default = StickyFooter;
 
@@ -27,7 +27,9 @@ var _Link = require('@material-ui/core/Link');
 
 var _Link2 = _interopRequireDefault(_Link);
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : { default: obj };
+}
 
 var classNames = require('classnames');
 
@@ -40,8 +42,8 @@ function Copyright(_ref) {
     _react2.default.createElement(
       _Link2.default,
       { color: 'inherit', href: 'https://www.rxpservices.com/' },
-      copyright ? copyright : 'RXP DesignOps'
-    )
+      copyright ? copyright : 'RXP DesignOps',
+    ),
   );
 }
 
@@ -49,30 +51,33 @@ var useStyles = (0, _styles.makeStyles)(function (theme) {
   return {
     root: {
       display: 'flex',
-      flexDirection: 'column'
+      flexDirection: 'column',
     },
     footer: {
       padding: theme.spacing(3, 2),
-      backgroundColor: theme.palette.type === 'light' ? theme.palette.grey[200] : theme.palette.grey[800]
+      backgroundColor:
+        theme.palette.type === 'light'
+          ? theme.palette.grey[200]
+          : theme.palette.grey[800],
     },
     left: {
-      textAlign: 'left'
+      textAlign: 'left',
     },
     right: {
-      textAlign: 'right'
+      textAlign: 'right',
     },
     center: {
-      textAlign: 'center'
-    }
+      textAlign: 'center',
+    },
   };
 });
 
 function StickyFooter(_ref2) {
   var copyright = _ref2.copyright,
-      footerText = _ref2.footerText,
-      _ref2$position = _ref2.position,
-      position = _ref2$position === undefined ? 'center' : _ref2$position,
-      children = _ref2.children;
+    footerText = _ref2.footerText,
+    _ref2$position = _ref2.position,
+    position = _ref2$position === undefined ? 'center' : _ref2$position,
+    children = _ref2.children;
 
   var classes = useStyles();
 
@@ -89,11 +94,11 @@ function StickyFooter(_ref2) {
         _react2.default.createElement(
           _Typography2.default,
           { variant: 'body1' },
-          footerText ? footerText : 'RXP DesignOps Demo Project'
+          footerText ? footerText : 'RXP DesignOps Demo Project',
         ),
         children,
-        _react2.default.createElement(Copyright, { copyright: copyright })
-      )
-    )
+        _react2.default.createElement(Copyright, { copyright: copyright }),
+      ),
+    ),
   );
 }
