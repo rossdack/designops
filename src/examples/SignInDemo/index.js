@@ -1,6 +1,6 @@
 import React from 'react';
-import { SignIn } from '../../lib';
-import { CodeSnippet, signInCode } from '../../codeBox';
+import { SignIn } from '@/lib';
+import { CodeSnippet, signInCode } from '@/codeBox';
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({

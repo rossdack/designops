@@ -10,8 +10,8 @@ import {
   Box,
 } from '@material-ui/core';
 /*****Import use for example purpose only */
-import { CustomModal } from '../../lib';
-import { CodeSnippet, customModalCode } from '../../codeBox';
+import { CustomModal } from '@/lib';
+import { CodeSnippet, customModalCode } from '@/codeBox';
 
 const CustomModalDemo = () => {
   const [openModal1, setOpenModalOne] = React.useState(false);

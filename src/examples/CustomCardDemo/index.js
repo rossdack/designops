@@ -1,11 +1,11 @@
 import React from 'react';
 import './index.css';
-import { CustomCard } from '../../lib';
-import { CustomModal } from '../../lib';
+import { CustomCard } from '@/lib';
+import { CustomModal } from '@/lib';
 import { useState } from 'react';
 import { TextField } from '@material-ui/core';
 import { IMAGE } from '../Constants';
-import { CodeSnippet, customCardCode } from '../../codeBox';
+import { CodeSnippet, customCardCode } from '@/codeBox';
 
 const CustomCardDemo = () => {
   const [openModal, setOpenModal] = useState(false);

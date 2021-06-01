@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './index.css';
 import Button from '@material-ui/core/Button';
-import Code from '../Code';
+import Code from '@/Code';
 import CodeIcon from '@material-ui/icons/Code';
 
 const CodeSnippet = ({ code }) => {

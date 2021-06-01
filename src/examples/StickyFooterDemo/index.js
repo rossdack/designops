@@ -1,6 +1,6 @@
 import React from 'react';
-import { StickyFooter } from '../../lib';
-import { CodeSnippet, stickyFooterCode } from '../../codeBox';
+import { StickyFooter } from '@/lib';
+import { CodeSnippet, stickyFooterCode } from '@/codeBox';
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({

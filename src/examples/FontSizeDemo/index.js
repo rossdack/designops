@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../lib/designops.css';
+import '@/lib/designops.css';
 import './index.css';
 const sizes = [
   'xs',
