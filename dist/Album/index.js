@@ -38,7 +38,7 @@ var _Container = require('@material-ui/core/Container');
 
 var _Container2 = _interopRequireDefault(_Container);
 
-var _CustomCard = require('@/lib/CustomCard');
+var _CustomCard = require('../CustomCard');
 
 var _CustomCard2 = _interopRequireDefault(_CustomCard);
 
