@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -11,7 +11,7 @@ import Grid from '@material-ui/core/Grid';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
-
+import { CustomModal } from '@/lib';
 const useStyles = makeStyles((theme) => ({
   root: {
     height: '50vh',
@@ -49,7 +49,8 @@ const useStyles = makeStyles((theme) => ({
 
 export default function SignInSide({ firstLabel, handleClick }) {
   const classes = useStyles();
-
+  const [forgotPasswordModal, setModalForgotPassword] = useState(false);
+  const [signupModal, setModalSignup] = useState(false);
   const onLoginSubmit = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
@@ -60,9 +61,56 @@ export default function SignInSide({ firstLabel, handleClick }) {
       handleClick();
     }
   };
+  const handleCloseForgotPassword = () => setModalForgotPassword(false);
+  const handleCloseSignup = () => setModalSignup(false);
+  const handleForgotPassword = (e) => {
+    setModalForgotPassword(true);
+  };
+
+  const handleSignUp = (e) => {
+    setModalSignup(true);
+  };
 
   return (
     <Grid container component="main" className={classes.root}>
+      <CustomModal
+        isOpen={forgotPasswordModal}
+        size="md"
+        leftBtnText="Cancel"
+        rightBtnText="Submit"
+        handleSuccess={handleCloseForgotPassword}
+        handleClose={handleCloseForgotPassword}
+        title="Forgot Password">
+        <p>Please enter your email address here to get forgot password link</p>
+        <form>
+          <TextField
+            id="outlined-basic"
+            label="Email"
+            variant="outlined"
+            type="email"
+            fullWidth
+          />
+        </form>
+      </CustomModal>
+      <CustomModal
+        isOpen={signupModal}
+        size="md"
+        leftBtnText="Cancel"
+        rightBtnText="Submit"
+        handleSuccess={handleCloseSignup}
+        handleClose={handleCloseSignup}
+        title="SignUp">
+        <p>Please enter your email address here to SignUp</p>
+        <form>
+          <TextField
+            id="outlined-basic"
+            label="Email"
+            variant="outlined"
+            type="email"
+            fullWidth
+          />
+        </form>
+      </CustomModal>
       <CssBaseline />
       <Grid item xs={false} sm={4} md={7} className={classes.image} />
       <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
@@ -110,12 +158,12 @@ export default function SignInSide({ firstLabel, handleClick }) {
             </Button>
             <Grid container>
               <Grid item xs>
-                <Link href="#" variant="body2">
+                <Link href="#" variant="body2" onClick={handleForgotPassword}>
                   Forgot password?
                 </Link>
               </Grid>
               <Grid item>
-                <Link href="#" variant="body2">
+                <Link href="#" variant="body2" onClick={handleSignUp}>
                   {"Don't have an account? Sign Up"}
                 </Link>
               </Grid>
