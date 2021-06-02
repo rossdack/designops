@@ -47,8 +47,19 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function SignInSide({ firstLabel }) {
+export default function SignInSide({ firstLabel, handleClick }) {
   const classes = useStyles();
+
+  const onLoginSubmit = (e) => {
+    e.preventDefault();
+    const email = e.target.email.value;
+    const password = e.target.password.value;
+
+    if (email === 'rxp@rxpservices.com' && password === 'rxp') {
+      console.log(email);
+      handleClick();
+    }
+  };
 
   return (
     <Grid container component="main" className={classes.root}>
@@ -62,7 +73,7 @@ export default function SignInSide({ firstLabel }) {
           <Typography component="h1" variant="h5">
             Sign in
           </Typography>
-          <form className={classes.form} noValidate>
+          <form className={classes.form} onSubmit={onLoginSubmit}>
             <TextField
               variant="outlined"
               margin="normal"
