@@ -97,9 +97,21 @@ var useStyles = (0, _styles.makeStyles)(function (theme) {
 });
 
 function SignInSide(_ref) {
-  var firstLabel = _ref.firstLabel;
+  var firstLabel = _ref.firstLabel,
+    handleClick = _ref.handleClick;
 
   var classes = useStyles();
+
+  var onLoginSubmit = function onLoginSubmit(e) {
+    e.preventDefault();
+    var email = e.target.email.value;
+    var password = e.target.password.value;
+
+    if (email === 'rxp@rxpservices.com' && password === 'rxp') {
+      console.log(email);
+      handleClick();
+    }
+  };
 
   return _react2.default.createElement(
     _Grid2.default,
@@ -138,7 +150,7 @@ function SignInSide(_ref) {
         ),
         _react2.default.createElement(
           'form',
-          { className: classes.form, noValidate: true },
+          { className: classes.form, onSubmit: onLoginSubmit },
           _react2.default.createElement(_TextField2.default, {
             variant: 'outlined',
             margin: 'normal',
