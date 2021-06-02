@@ -1,7 +1,7 @@
 
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
+Object.defineProperty(exports, '__esModule', {
+  value: true,
 });
 exports.default = SignInSide;
 
@@ -55,39 +55,44 @@ var _Typography2 = _interopRequireDefault(_Typography);
 
 var _styles = require('@material-ui/core/styles');
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : { default: obj };
+}
 
 var useStyles = (0, _styles.makeStyles)(function (theme) {
   return {
     root: {
       height: '50vh',
       width: '80%',
-      margin: 'auto'
+      margin: 'auto',
     },
     image: {
       backgroundImage: 'url(https://source.unsplash.com/random)',
       backgroundRepeat: 'no-repeat',
-      backgroundColor: theme.palette.type === 'light' ? theme.palette.grey[50] : theme.palette.grey[900],
+      backgroundColor:
+        theme.palette.type === 'light'
+          ? theme.palette.grey[50]
+          : theme.palette.grey[900],
       backgroundSize: 'cover',
-      backgroundPosition: 'center'
+      backgroundPosition: 'center',
     },
     paper: {
       margin: theme.spacing(8, 4),
       display: 'flex',
       flexDirection: 'column',
-      alignItems: 'center'
+      alignItems: 'center',
     },
     avatar: {
       margin: theme.spacing(1),
-      backgroundColor: theme.palette.secondary.main
+      backgroundColor: theme.palette.secondary.main,
     },
     form: {
       width: '100%',
-      marginTop: theme.spacing(1)
+      marginTop: theme.spacing(1),
     },
     submit: {
-      margin: theme.spacing(3, 0, 2)
-    }
+      margin: theme.spacing(3, 0, 2),
+    },
   };
 });
 
@@ -100,22 +105,36 @@ function SignInSide(_ref) {
     _Grid2.default,
     { container: true, component: 'main', className: classes.root },
     _react2.default.createElement(_CssBaseline2.default, null),
-    _react2.default.createElement(_Grid2.default, { item: true, xs: false, sm: 4, md: 7, className: classes.image }),
+    _react2.default.createElement(_Grid2.default, {
+      item: true,
+      xs: false,
+      sm: 4,
+      md: 7,
+      className: classes.image,
+    }),
     _react2.default.createElement(
       _Grid2.default,
-      { item: true, xs: 12, sm: 8, md: 5, component: _Paper2.default, elevation: 6, square: true },
+      {
+        item: true,
+        xs: 12,
+        sm: 8,
+        md: 5,
+        component: _Paper2.default,
+        elevation: 6,
+        square: true,
+      },
       _react2.default.createElement(
         'div',
         { className: classes.paper },
         _react2.default.createElement(
           _Avatar2.default,
           { className: classes.avatar },
-          _react2.default.createElement(_LockOutlined2.default, null)
+          _react2.default.createElement(_LockOutlined2.default, null),
         ),
         _react2.default.createElement(
           _Typography2.default,
           { component: 'h1', variant: 'h5' },
-          'Sign in'
+          'Sign in',
         ),
         _react2.default.createElement(
           'form',
@@ -126,10 +145,10 @@ function SignInSide(_ref) {
             required: true,
             fullWidth: true,
             id: 'email',
-            label: firstLabel ? firstLabel : "Email Address",
+            label: firstLabel ? firstLabel : 'Email Address',
             name: 'email',
             autoComplete: 'email',
-            autoFocus: true
+            autoFocus: true,
           }),
           _react2.default.createElement(_TextField2.default, {
             variant: 'outlined',
@@ -140,11 +159,14 @@ function SignInSide(_ref) {
             label: 'Password',
             type: 'password',
             id: 'password',
-            autoComplete: 'current-password'
+            autoComplete: 'current-password',
           }),
           _react2.default.createElement(_FormControlLabel2.default, {
-            control: _react2.default.createElement(_Checkbox2.default, { value: 'remember', color: 'primary' }),
-            label: 'Remember me'
+            control: _react2.default.createElement(_Checkbox2.default, {
+              value: 'remember',
+              color: 'primary',
+            }),
+            label: 'Remember me',
           }),
           _react2.default.createElement(
             _Button2.default,
@@ -153,9 +175,9 @@ function SignInSide(_ref) {
               fullWidth: true,
               variant: 'contained',
               color: 'primary',
-              className: classes.submit
+              className: classes.submit,
             },
-            'Sign In'
+            'Sign In',
           ),
           _react2.default.createElement(
             _Grid2.default,
@@ -166,8 +188,8 @@ function SignInSide(_ref) {
               _react2.default.createElement(
                 _Link2.default,
                 { href: '#', variant: 'body2' },
-                'Forgot password?'
-              )
+                'Forgot password?',
+              ),
             ),
             _react2.default.createElement(
               _Grid2.default,
@@ -175,12 +197,12 @@ function SignInSide(_ref) {
               _react2.default.createElement(
                 _Link2.default,
                 { href: '#', variant: 'body2' },
-                "Don't have an account? Sign Up"
-              )
-            )
-          )
-        )
-      )
-    )
+                "Don't have an account? Sign Up",
+              ),
+            ),
+          ),
+        ),
+      ),
+    ),
   );
 }

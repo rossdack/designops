@@ -1,9 +1,14 @@
 
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
+Object.defineProperty(exports, '__esModule', {
+  value: true,
 });
-exports.CustomCard = exports.CustomModal = exports.StickyFooter = exports.SignIn = exports.Album = undefined;
+exports.CustomCard =
+  exports.CustomModal =
+  exports.StickyFooter =
+  exports.SignIn =
+  exports.Album =
+    undefined;
 
 var _Album = require('./Album');
 
@@ -25,7 +30,9 @@ var _CustomCard = require('./CustomCard');
 
 var _CustomCard2 = _interopRequireDefault(_CustomCard);
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : { default: obj };
+}
 
 exports.Album = _Album2.default;
 exports.SignIn = _SignIn2.default;
