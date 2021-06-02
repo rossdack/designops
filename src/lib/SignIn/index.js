@@ -95,7 +95,7 @@ export default function SignInSide({ firstLabel }) {
               variant="contained"
               color="primary"
               className={classes.submit}>
-              Sign In-jin
+              Sign In
             </Button>
             <Grid container>
               <Grid item xs>
