@@ -2,7 +2,7 @@ import { Switch } from 'react-router';
 import React from 'react';
 import RouteWithSubRoutes from './RouteWithSubRoutes';
 
-export default function Router(props) {
+export default function AppRouter(props) {
   const { routes } = props;
 
   return (

@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import { Toolbar } from '@material-ui/core';
 import NavigationBar from '@/components/NavigationBar';
 import ROUTES from '@/constants/routes';
-import Router from '@/components/Router';
+import AppRouter from '@/components/AppRouter';
 import AppHeader from '@/components/AppHeader';
 
 const useStyles = makeStyles((theme) => ({
@@ -27,7 +27,7 @@ const MainPage = (props) => {
       <NavigationBar {...props} />
       <main className={classes.content}>
         <Toolbar />
-        <Router routes={ROUTES} />
+        <AppRouter routes={ROUTES} />
       </main>
     </div>
   );
