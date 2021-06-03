@@ -3,6 +3,47 @@
 Object.defineProperty(exports, '__esModule', {
   value: true,
 });
+
+var _slicedToArray = (function () {
+  function sliceIterator(arr, i) {
+    var _arr = [];
+    var _n = true;
+    var _d = false;
+    var _e = undefined;
+    try {
+      for (
+        var _i = arr[Symbol.iterator](), _s;
+        !(_n = (_s = _i.next()).done);
+        _n = true
+      ) {
+        _arr.push(_s.value);
+        if (i && _arr.length === i) break;
+      }
+    } catch (err) {
+      _d = true;
+      _e = err;
+    } finally {
+      try {
+        if (!_n && _i['return']) _i['return']();
+      } finally {
+        if (_d) throw _e;
+      }
+    }
+    return _arr;
+  }
+  return function (arr, i) {
+    if (Array.isArray(arr)) {
+      return arr;
+    } else if (Symbol.iterator in Object(arr)) {
+      return sliceIterator(arr, i);
+    } else {
+      throw new TypeError(
+        'Invalid attempt to destructure non-iterable instance',
+      );
+    }
+  };
+})();
+
 exports.default = SignInSide;
 
 var _react = require('react');
@@ -55,6 +96,10 @@ var _Typography2 = _interopRequireDefault(_Typography);
 
 var _styles = require('@material-ui/core/styles');
 
+var _CustomModal = require('../CustomModal');
+
+var _CustomModal2 = _interopRequireDefault(_CustomModal);
+
 function _interopRequireDefault(obj) {
   return obj && obj.__esModule ? obj : { default: obj };
 }
@@ -102,6 +147,16 @@ function SignInSide(_ref) {
 
   var classes = useStyles();
 
+  var _useState = (0, _react.useState)(false),
+    _useState2 = _slicedToArray(_useState, 2),
+    forgotPasswordModal = _useState2[0],
+    setModalForgotPassword = _useState2[1];
+
+  var _useState3 = (0, _react.useState)(false),
+    _useState4 = _slicedToArray(_useState3, 2),
+    signupModal = _useState4[0],
+    setModalSignup = _useState4[1];
+
   var onLoginSubmit = function onLoginSubmit(e) {
     e.preventDefault();
     var email = e.target.email.value;
@@ -112,10 +167,79 @@ function SignInSide(_ref) {
       handleClick();
     }
   };
+  var handleCloseForgotPassword = function handleCloseForgotPassword() {
+    return setModalForgotPassword(false);
+  };
+  var handleCloseSignup = function handleCloseSignup() {
+    return setModalSignup(false);
+  };
+  var handleForgotPassword = function handleForgotPassword(e) {
+    setModalForgotPassword(true);
+  };
+
+  var handleSignUp = function handleSignUp(e) {
+    setModalSignup(true);
+  };
 
   return _react2.default.createElement(
     _Grid2.default,
     { container: true, component: 'main', className: classes.root },
+    _react2.default.createElement(
+      _CustomModal2.default,
+      {
+        isOpen: forgotPasswordModal,
+        size: 'md',
+        leftBtnText: 'Cancel',
+        rightBtnText: 'Submit',
+        handleSuccess: handleCloseForgotPassword,
+        handleClose: handleCloseForgotPassword,
+        title: 'Forgot Password',
+      },
+      _react2.default.createElement(
+        'p',
+        null,
+        'Please enter your email address here to get forgot password link',
+      ),
+      _react2.default.createElement(
+        'form',
+        null,
+        _react2.default.createElement(_TextField2.default, {
+          id: 'outlined-basic',
+          label: 'Email',
+          variant: 'outlined',
+          type: 'email',
+          fullWidth: true,
+        }),
+      ),
+    ),
+    _react2.default.createElement(
+      _CustomModal2.default,
+      {
+        isOpen: signupModal,
+        size: 'md',
+        leftBtnText: 'Cancel',
+        rightBtnText: 'Submit',
+        handleSuccess: handleCloseSignup,
+        handleClose: handleCloseSignup,
+        title: 'SignUp',
+      },
+      _react2.default.createElement(
+        'p',
+        null,
+        'Please enter your email address here to SignUp',
+      ),
+      _react2.default.createElement(
+        'form',
+        null,
+        _react2.default.createElement(_TextField2.default, {
+          id: 'outlined-basic',
+          label: 'Email',
+          variant: 'outlined',
+          type: 'email',
+          fullWidth: true,
+        }),
+      ),
+    ),
     _react2.default.createElement(_CssBaseline2.default, null),
     _react2.default.createElement(_Grid2.default, {
       item: true,
@@ -199,7 +323,7 @@ function SignInSide(_ref) {
               { item: true, xs: true },
               _react2.default.createElement(
                 _Link2.default,
-                { href: '#', variant: 'body2' },
+                { href: '#', variant: 'body2', onClick: handleForgotPassword },
                 'Forgot password?',
               ),
             ),
@@ -208,7 +332,7 @@ function SignInSide(_ref) {
               { item: true },
               _react2.default.createElement(
                 _Link2.default,
-                { href: '#', variant: 'body2' },
+                { href: '#', variant: 'body2', onClick: handleSignUp },
                 "Don't have an account? Sign Up",
               ),
             ),

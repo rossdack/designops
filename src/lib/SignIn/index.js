@@ -11,7 +11,8 @@ import Grid from '@material-ui/core/Grid';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
-import { CustomModal } from '@/lib';
+import CustomModal from '../CustomModal';
+
 const useStyles = makeStyles((theme) => ({
   root: {
     height: '50vh',
