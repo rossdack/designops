@@ -96,7 +96,9 @@ var _Typography2 = _interopRequireDefault(_Typography);
 
 var _styles = require('@material-ui/core/styles');
 
-var _lib = require('@/lib');
+var _CustomModal = require('../CustomModal');
+
+var _CustomModal2 = _interopRequireDefault(_CustomModal);
 
 function _interopRequireDefault(obj) {
   return obj && obj.__esModule ? obj : { default: obj };
@@ -183,7 +185,7 @@ function SignInSide(_ref) {
     _Grid2.default,
     { container: true, component: 'main', className: classes.root },
     _react2.default.createElement(
-      _lib.CustomModal,
+      _CustomModal2.default,
       {
         isOpen: forgotPasswordModal,
         size: 'md',
@@ -211,7 +213,7 @@ function SignInSide(_ref) {
       ),
     ),
     _react2.default.createElement(
-      _lib.CustomModal,
+      _CustomModal2.default,
       {
         isOpen: signupModal,
         size: 'md',
