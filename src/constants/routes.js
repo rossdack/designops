@@ -7,17 +7,6 @@ import FontSizeDemo from '@/pages/FontSizeDemo';
 
 const ROUTES = [
   {
-    path: '/',
-    exact: true,
-    redirect: '/home',
-  },
-  {
-    path: '/home',
-    name: 'Home',
-    component: null,
-    exact: true,
-  },
-  {
     path: '/color',
     name: 'Color Palette',
     exact: true,
