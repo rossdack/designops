@@ -6,7 +6,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { CssBaseline } from '@material-ui/core';
 
 ReactDOM.render(
-  <BrowserRouter>
+  <BrowserRouter basename={'designops'}>
     <CssBaseline />
     <MainPage />
   </BrowserRouter>,
