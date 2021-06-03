@@ -42,6 +42,12 @@ const ROUTES = [
     exact: true,
     component: CustomCardDemo,
   },
+  {
+    path: '/',
+    name: 'Color Palette',
+    exact: true,
+    component: ColorPalette,
+  },
 ];
 
 export default ROUTES;
