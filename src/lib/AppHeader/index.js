@@ -9,24 +9,37 @@ const useStyles = makeStyles((theme) => ({
   tooltext: {
     paddingLeft: theme.spacing(55),
   },
+  toolBar: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    background: '#0a2243',
+  },
+  logo: {
+    height: '100%',
+    position: 'absolute',
+    left: 0,
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    margin: theme.spacing(0, 3),
+  },
 }));
 
 const AppHeader = (props) => {
   const classes = useStyles();
+  const {
+    title = 'Demo Page',
+    logoSource = 'https://assets-global.website-files.com/5eb0a0358a376a75f540e0ea/605bc8ff5dd0b052c46e6d37_RXP%20group-Endorsed_svg_White.svg',
+  } = props;
 
   return (
     <AppBar position="fixed" className={classes.appBar}>
-      <Toolbar className="toolContainer">
-        <div className="toolBar">
-          <img
-            src="https://assets-global.website-files.com/5eb0a0358a376a75f540e0ea/605bc8ff5dd0b052c46e6d37_RXP%20group-Endorsed_svg_White.svg"
-            width="150"
-            alt="RXP Group"
-          />{' '}
+      <Toolbar className={classes.toolBar}>
+        <div className={classes.logo}>
+          <img src={logoSource} width="150" alt="RXP Group" />
         </div>
-        <Typography variant="h6" className={classes.tooltext}>
-          Demo Project
-        </Typography>
+        <Typography variant="h6">{title}</Typography>
       </Toolbar>
     </AppBar>
   );
