@@ -143,7 +143,8 @@ var useStyles = (0, _styles.makeStyles)(function (theme) {
 
 function SignInSide(_ref) {
   var firstLabel = _ref.firstLabel,
-    handleClick = _ref.handleClick;
+    handleClick = _ref.handleClick,
+    validation = _ref.validation;
 
   var classes = useStyles();
 
@@ -162,8 +163,9 @@ function SignInSide(_ref) {
     var email = e.target.email.value;
     var password = e.target.password.value;
 
-    if (email === 'rxp@rxpservices.com' && password === 'rxp') {
+    if (validation === 'true') {
       console.log(email);
+      console.log(password);
       handleClick();
     }
   };

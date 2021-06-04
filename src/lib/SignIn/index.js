@@ -48,7 +48,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function SignInSide({ firstLabel, handleClick }) {
+export default function SignInSide({ firstLabel, handleClick, validation }) {
   const classes = useStyles();
   const [forgotPasswordModal, setModalForgotPassword] = useState(false);
   const [signupModal, setModalSignup] = useState(false);
@@ -57,8 +57,9 @@ export default function SignInSide({ firstLabel, handleClick }) {
     const email = e.target.email.value;
     const password = e.target.password.value;
 
-    if (email === 'rxp@rxpservices.com' && password === 'rxp') {
+    if (validation === 'true') {
       console.log(email);
+      console.log(password);
       handleClick();
     }
   };
