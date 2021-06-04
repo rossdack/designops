@@ -7,6 +7,11 @@ import FontSizeDemo from '@/pages/FontSizeDemo';
 
 const ROUTES = [
   {
+    path: '/',
+    exact: true,
+    redirect: '/color',
+  },
+  {
     path: '/color',
     name: 'Color Palette',
     exact: true,
@@ -41,12 +46,6 @@ const ROUTES = [
     name: 'Card',
     exact: true,
     component: CustomCardDemo,
-  },
-  {
-    path: '/',
-    name: 'Color Palette',
-    exact: true,
-    component: ColorPalette,
   },
 ];
 
