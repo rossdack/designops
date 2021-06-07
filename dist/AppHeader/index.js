@@ -12,6 +12,10 @@ var _styles = require('@material-ui/core/styles');
 
 var _core = require('@material-ui/core');
 
+var _classnames = require('classnames');
+
+var _classnames2 = _interopRequireDefault(_classnames);
+
 function _interopRequireDefault(obj) {
   return obj && obj.__esModule ? obj : { default: obj };
 }
@@ -28,7 +32,6 @@ var useStyles = (0, _styles.makeStyles)(function (theme) {
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
-      background: '#0a2243',
     },
     logo: {
       height: '100%',
@@ -57,7 +60,7 @@ var AppHeader = function AppHeader(props) {
     { position: 'fixed', className: classes.appBar },
     _react2.default.createElement(
       _core.Toolbar,
-      { className: classes.toolBar },
+      { className: (0, _classnames2.default)('bg-primary', classes.toolBar) },
       _react2.default.createElement(
         'div',
         { className: classes.logo },
