@@ -1,6 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { AppBar, Toolbar, Typography } from '@material-ui/core';
+import classNames from 'classnames';
 
 const useStyles = makeStyles((theme) => ({
   appBar: {
@@ -13,7 +14,6 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    background: '#0a2243',
   },
   logo: {
     height: '100%',
@@ -35,7 +35,7 @@ const AppHeader = (props) => {
 
   return (
     <AppBar position="fixed" className={classes.appBar}>
-      <Toolbar className={classes.toolBar}>
+      <Toolbar className={classNames('bg-primary', classes.toolBar)}>
         <div className={classes.logo}>
           <img src={logoSource} width="150" alt="RXP Group" />
         </div>
