@@ -1,6 +1,8 @@
 :root {
   --bg-opacity-one: 1;
+  --primary-color: #0a2243;
 }
+
 .bg-transparent {
   background-color: transparent;
 }
@@ -10,7 +12,7 @@
   background-color: currentColor;
 }
 .bg-primary {
-  background-color: #524439;
+  background-color: var(--primary-color);
 }
 
 .bg-black {
@@ -363,7 +365,7 @@
   color: rgba(0, 0, 0, var(--bg-opacity-one));
 }
 .text-primary {
-  color: #0a2243;
+  color: var(--primary-color);
 }
 .text-white {
   color: rgba(255, 255, 255, var(--bg-opacity-one));
