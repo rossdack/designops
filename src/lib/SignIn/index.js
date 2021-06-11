@@ -155,7 +155,8 @@ export default function SignInSide({ firstLabel, handleClick, validation }) {
               fullWidth
               variant="contained"
               color="primary"
-              className={classes.submit}>
+              className={classes.submit}
+              data-testid="button_click">
               Sign In
             </Button>
             <Grid container>
