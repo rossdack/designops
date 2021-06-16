@@ -38,7 +38,7 @@ const AppHeader = (props) => {
       <Toolbar className={classes.toolBar}>
         <div className={classes.logo}>
           <img
-            data-testid_1="image"
+            data-testid="image"
             src={logoSource}
             width="150"
             alt="RXP Group"

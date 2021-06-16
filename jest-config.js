@@ -1,5 +1,10 @@
-const config = {
-  roots: ['./__tests__'],
-};
+// const config = {
+//   roots: ['./src/__test__'],
+// };
 
-module.exports = config;
+// module.exports = config;
+
+const { createJestConfig } = require('@craco/craco');
+const cracoConfig = require('./craco.config.js');
+const jestConfig = createJestConfig(cracoConfig);
+module.exports = jestConfig;
