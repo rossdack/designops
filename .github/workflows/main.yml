@@ -23,7 +23,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.PA_TOKEN }}
       - run: |
-          curl -XPOST -u "${{ secrets.PA_USERNAME}}:${{secrets.PA_TOKEN}}" -H "Accept: application/vnd.github.everest-preview+json" -H "Content-Type: application/json" https://api.github.com/repos/Ashwin-RXP/demoproj/dispatches --data '{"event_type": "build_application"}'
+          curl -XPOST -u "${{ secrets.PA_USERNAME}}:${{secrets.PA_TOKEN}}" -H "Accept: application/vnd.github.everest-preview+json" -H "Content-Type: application/json" https://api.github.com/repos/RXPServices/demoproj/dispatches --data '{"event_type": "build_application"}'
       - name: Send Teams Notification
         if: success()
         uses: aliencube/microsoft-teams-actions@v0.8.0
