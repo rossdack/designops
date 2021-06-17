@@ -93,11 +93,14 @@ function StickyFooter(_ref2) {
         { fullWidth: true },
         _react2.default.createElement(
           _Typography2.default,
-          { variant: 'body1' },
+          { variant: 'body1', 'data-testid': 'footer' },
           footerText ? footerText : 'RXP DesignOps Demo Project',
         ),
         children,
-        _react2.default.createElement(Copyright, { copyright: copyright }),
+        _react2.default.createElement(Copyright, {
+          'data-testid': 'copyright',
+          copyright: copyright,
+        }),
       ),
     ),
   );

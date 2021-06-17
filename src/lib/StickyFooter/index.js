@@ -57,7 +57,7 @@ export default function StickyFooter({
             {footerText ? footerText : 'RXP DesignOps Demo Project'}
           </Typography>
           {children}
-          <Copyright copyright={copyright} />
+          <Copyright data-testid="copyright" copyright={copyright} />
         </Container>
       </footer>
     </div>

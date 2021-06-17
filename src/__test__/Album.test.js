@@ -7,7 +7,12 @@ const createRender = () => {
   return shallow(<Album />);
 };
 
+/*  This is the testing for Album component which is inside lib folder.
+ *
+ */
+
 describe('Album Component', () => {
+  // Checking render
   it('renders without crashing', () => {
     createRender();
   });

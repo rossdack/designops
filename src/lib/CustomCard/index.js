@@ -42,7 +42,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const CustomCard = (props) => {
-  const {  
+  const {
     headingClasses,
     contentClasses,
     cardClasses,
@@ -56,33 +56,49 @@ const CustomCard = (props) => {
     cardHeading,
     cardSubHeading,
     img,
-    } = props
+  } = props;
   const classes = useStyles();
 
   return (
     <Card className={classNames(classes.card, cardClasses)}>
-        <CardMedia
-            className={classNames(classes.cardMedia, cardMediaClasses)}
-            image= {img ? img : "https://source.unsplash.com/random"}
-            title="Image title"/>
-            <CardContent className={classNames(classes.cardContent, cardContentClasses)}>
-                <Typography gutterBottom variant="h5" component="h2" className={headingClasses}>
-                    {cardHeading ? cardHeading : 'Heading'}
-                </Typography>
-                <Typography className={contentClasses}>
-                    {cardSubHeading ? cardSubHeading : 'This is a media card. You can use this section to describe the content.'}
-                </Typography>
-            </CardContent>
-            <CardActions className={cardActionClasses}>
-            <Button size="small" color="primary" className={viewButtonClasses} onClick={() => viewAction(cardHeading, cardSubHeading)}>
-                View
-            </Button>
-            <Button size="small" color="primary" className={editButtonClasses} onClick={() => editAction(props)}>
-                Edit
-            </Button>
-        </CardActions>
+      <CardMedia
+        className={classNames(classes.cardMedia, cardMediaClasses)}
+        image={img ? img : 'https://source.unsplash.com/random'}
+        title="Image title"
+      />
+      <CardContent
+        className={classNames(classes.cardContent, cardContentClasses)}>
+        <Typography
+          gutterBottom
+          variant="h5"
+          component="h2"
+          className={headingClasses}>
+          {cardHeading ? cardHeading : 'Heading'}
+        </Typography>
+        <Typography className={contentClasses}>
+          {cardSubHeading
+            ? cardSubHeading
+            : 'This is a media card. You can use this section to describe the content.'}
+        </Typography>
+      </CardContent>
+      <CardActions className={cardActionClasses}>
+        <Button
+          size="small"
+          color="primary"
+          className={viewButtonClasses}
+          onClick={() => viewAction(cardHeading, cardSubHeading)}>
+          View
+        </Button>
+        <Button
+          size="small"
+          color="primary"
+          className={editButtonClasses}
+          onClick={() => editAction(props)}>
+          Edit
+        </Button>
+      </CardActions>
     </Card>
   );
-}
+};
 
 export default CustomCard;

@@ -7,7 +7,12 @@ const createRender = () => {
   return shallow(<CustomCard />);
 };
 
+/*  This is the testing for CustomCard component which is inside lib folder.
+ *
+ */
+
 describe('CustomCard Component', () => {
+  // Checking render
   it('renders without crashing', () => {
     createRender();
   });
