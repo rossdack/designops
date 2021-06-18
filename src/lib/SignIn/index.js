@@ -100,7 +100,7 @@ export default function SignInSide({ firstLabel, handleClick, validation }) {
         rightBtnText="Submit"
         handleSuccess={handleCloseSignup}
         handleClose={handleCloseSignup}
-        data-testid1="CustomModel"
+        data-testid="CustomModel"
         title="SignUp">
         <p>Please enter your email address here to SignUp</p>
         <form>
