@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch:
 
 jobs:
  build:
@@ -25,6 +26,7 @@ jobs:
         #   draft: false
         #   prerelease: false
           auto_increment_type: patch
+          tag_schema: semantic
 
       - name: Dispatch update event to demoproj repo
         uses: peter-evans/repository-dispatch@v1.1.3
