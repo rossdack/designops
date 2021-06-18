@@ -222,7 +222,7 @@ function SignInSide(_ref) {
         rightBtnText: 'Submit',
         handleSuccess: handleCloseSignup,
         handleClose: handleCloseSignup,
-        'data-testid1': 'CustomModel',
+        'data-testid': 'CustomModel',
         title: 'SignUp',
       },
       _react2.default.createElement(
