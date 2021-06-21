@@ -162,6 +162,7 @@ var CustomModal = function CustomModal(_ref) {
       open: isOpen,
       'aria-labelledby': title,
       className: dialogClasses,
+      'data-testid': 'dialog',
     },
     _react2.default.createElement(
       DialogTitle,

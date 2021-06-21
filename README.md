@@ -1,8 +1,9 @@
 # Design Library
 
 This project is made to showcase RXP Design Library.
-* Visit [Design Library Demo](https://rxpservices.github.io/designops/) to see a live demo
-* Visit [Coupon Demo](https://rxpservices.github.io/demoproj/) to see implementations
+
+- Visit [Design Library Demo](https://rxpservices.github.io/designops/) to see a live demo
+- Visit [Coupon Demo](https://rxpservices.github.io/demoproj/) to see implementations
 
 ## Installation
 
@@ -34,7 +35,6 @@ To export components, run `npm build` to compile the components in `/src/lib` to
 
 The project hosts on GitHub Pages. With the help of [GitHub Actions](https://github.com/RXPServices/designops/actions), the project runs deployment whenever an update is made to the main branch.
 
-
 ## Development Guide
 
 - Eslint
@@ -42,5 +42,3 @@ The project hosts on GitHub Pages. With the help of [GitHub Actions](https://git
 - Feature Branching - naming should follow **feature/initial-descriptive-task** format
 - Code Review - assign a reviewer to pull requests
 - Remove Merged Branches
-
-

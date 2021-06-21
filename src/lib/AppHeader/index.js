@@ -37,9 +37,16 @@ const AppHeader = (props) => {
     <AppBar position="fixed" className={classes.appBar}>
       <Toolbar className={classNames('bg-primary', classes.toolBar)}>
         <div className={classes.logo}>
-          <img src={logoSource} width="150" alt="RXP Group" />
+          <img
+            data-testid="image"
+            src={logoSource}
+            width="150"
+            alt="RXP Group"
+          />
         </div>
-        <Typography variant="h6">{title}</Typography>
+        <Typography data-testid="title" variant="h6">
+          {title}
+        </Typography>
       </Toolbar>
     </AppBar>
   );

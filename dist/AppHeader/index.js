@@ -65,12 +65,17 @@ var AppHeader = function AppHeader(props) {
         'div',
         { className: classes.logo },
         _react2.default.createElement('img', {
+          'data-testid': 'image',
           src: logoSource,
           width: '150',
           alt: 'RXP Group',
         }),
       ),
-      _react2.default.createElement(_core.Typography, { variant: 'h6' }, title),
+      _react2.default.createElement(
+        _core.Typography,
+        { 'data-testid': 'title', variant: 'h6' },
+        title,
+      ),
     ),
   );
 };

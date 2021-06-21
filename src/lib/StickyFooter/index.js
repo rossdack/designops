@@ -7,7 +7,7 @@ import Link from '@material-ui/core/Link';
 
 const classNames = require('classnames');
 
-function Copyright({copyright}) {
+function Copyright({ copyright }) {
   return (
     <Typography variant="body2" color="textSecondary">
       <Link color="inherit" href="https://www.rxpservices.com/">
@@ -20,12 +20,14 @@ function Copyright({copyright}) {
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
-    flexDirection: 'column'
+    flexDirection: 'column',
   },
   footer: {
     padding: theme.spacing(3, 2),
     backgroundColor:
-      theme.palette.type === 'light' ? theme.palette.grey[200] : theme.palette.grey[800],
+      theme.palette.type === 'light'
+        ? theme.palette.grey[200]
+        : theme.palette.grey[800],
   },
   left: {
     textAlign: 'left',
@@ -38,7 +40,12 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function StickyFooter ({copyright, footerText, position='center', children}) {
+export default function StickyFooter({
+  copyright,
+  footerText,
+  position = 'center',
+  children,
+}) {
   const classes = useStyles();
 
   return (
@@ -46,9 +53,11 @@ export default function StickyFooter ({copyright, footerText, position='center',
       <CssBaseline />
       <footer className={classNames(classes.footer, classes[position])}>
         <Container fullWidth>
-          <Typography variant="body1">{footerText ? footerText : 'RXP DesignOps Demo Project'}</Typography>
+          <Typography variant="body1" data-testid="footer">
+            {footerText ? footerText : 'RXP DesignOps Demo Project'}
+          </Typography>
           {children}
-          <Copyright copyright={copyright}/>
+          <Copyright data-testid="copyright" copyright={copyright} />
         </Container>
       </footer>
     </div>

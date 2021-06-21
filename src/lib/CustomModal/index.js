@@ -78,7 +78,8 @@ const CustomModal = ({
       onClose={handleClose}
       open={isOpen}
       aria-labelledby={title}
-      className={dialogClasses}>
+      className={dialogClasses}
+      data-testid="dialog">
       <DialogTitle
         classes={dialogTitleClasses}
         id={title}

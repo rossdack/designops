@@ -54,12 +54,11 @@ export default function SignInSide({ firstLabel, handleClick, validation }) {
   const [signupModal, setModalSignup] = useState(false);
   const onLoginSubmit = (e) => {
     e.preventDefault();
-    const email = e.target.email.value;
-    const password = e.target.password.value;
+
+    //const email = e.target.email.value;
+    //const password = e.target.password.value;
 
     if (validation === 'true') {
-      console.log(email);
-      console.log(password);
       handleClick();
     }
   };
@@ -101,6 +100,7 @@ export default function SignInSide({ firstLabel, handleClick, validation }) {
         rightBtnText="Submit"
         handleSuccess={handleCloseSignup}
         handleClose={handleCloseSignup}
+        data-testid="CustomModel"
         title="SignUp">
         <p>Please enter your email address here to SignUp</p>
         <form>
@@ -134,6 +134,7 @@ export default function SignInSide({ firstLabel, handleClick, validation }) {
               name="email"
               autoComplete="email"
               autoFocus
+              data-testid="text-email"
             />
             <TextField
               variant="outlined"
@@ -145,6 +146,7 @@ export default function SignInSide({ firstLabel, handleClick, validation }) {
               type="password"
               id="password"
               autoComplete="current-password"
+              data-testid="text-password"
             />
             <FormControlLabel
               control={<Checkbox value="remember" color="primary" />}
@@ -155,7 +157,8 @@ export default function SignInSide({ firstLabel, handleClick, validation }) {
               fullWidth
               variant="contained"
               color="primary"
-              className={classes.submit}>
+              className={classes.submit}
+              data-testid="button_click">
               Sign In
             </Button>
             <Grid container>

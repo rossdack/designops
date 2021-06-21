@@ -101,7 +101,9 @@ var CustomCard = function CustomCard(props) {
     }),
     _react2.default.createElement(
       _CardContent2.default,
-      { className: classNames(classes.cardContent, cardContentClasses) },
+      {
+        className: classNames(classes.cardContent, cardContentClasses),
+      },
       _react2.default.createElement(
         _Typography2.default,
         {

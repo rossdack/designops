@@ -160,12 +160,11 @@ function SignInSide(_ref) {
 
   var onLoginSubmit = function onLoginSubmit(e) {
     e.preventDefault();
-    var email = e.target.email.value;
-    var password = e.target.password.value;
+
+    //const email = e.target.email.value;
+    //const password = e.target.password.value;
 
     if (validation === 'true') {
-      console.log(email);
-      console.log(password);
       handleClick();
     }
   };
@@ -223,6 +222,7 @@ function SignInSide(_ref) {
         rightBtnText: 'Submit',
         handleSuccess: handleCloseSignup,
         handleClose: handleCloseSignup,
+        'data-testid': 'CustomModel',
         title: 'SignUp',
       },
       _react2.default.createElement(
@@ -287,6 +287,7 @@ function SignInSide(_ref) {
             name: 'email',
             autoComplete: 'email',
             autoFocus: true,
+            'data-testid': 'text-email',
           }),
           _react2.default.createElement(_TextField2.default, {
             variant: 'outlined',
@@ -298,6 +299,7 @@ function SignInSide(_ref) {
             type: 'password',
             id: 'password',
             autoComplete: 'current-password',
+            'data-testid': 'text-password',
           }),
           _react2.default.createElement(_FormControlLabel2.default, {
             control: _react2.default.createElement(_Checkbox2.default, {
@@ -314,6 +316,7 @@ function SignInSide(_ref) {
               variant: 'contained',
               color: 'primary',
               className: classes.submit,
+              'data-testid': 'button_click',
             },
             'Sign In',
           ),
