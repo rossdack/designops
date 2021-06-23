@@ -23,7 +23,8 @@ const MainPage = (props) => {
   const classes = useStyles();
   return (
     <div className={classes.root}>
-      <AppHeader title="RXP Design Library" />
+      {/* <AppHeader title="RXP Design Library" /> */}
+      <AppHeader title="RXP Design Library" className="bg-gray-700" />
       <NavigationBar {...props} />
       <main className={classes.content}>
         <Toolbar />

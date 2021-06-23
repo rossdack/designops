@@ -53,14 +53,21 @@ var AppHeader = function AppHeader(props) {
     logoSource =
       _props$logoSource === undefined
         ? 'https://assets-global.website-files.com/5eb0a0358a376a75f540e0ea/605bc8ff5dd0b052c46e6d37_RXP%20group-Endorsed_svg_White.svg'
-        : _props$logoSource;
+        : _props$logoSource,
+    className = props.className;
 
   return _react2.default.createElement(
     _core.AppBar,
     { position: 'fixed', className: classes.appBar },
     _react2.default.createElement(
       _core.Toolbar,
-      { className: (0, _classnames2.default)('bg-primary', classes.toolBar) },
+      {
+        className: (0, _classnames2.default)(
+          'bg-primary',
+          classes.toolBar,
+          className,
+        ),
+      },
       _react2.default.createElement(
         'div',
         { className: classes.logo },
