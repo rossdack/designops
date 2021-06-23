@@ -50,10 +50,10 @@ const ColorPalette = () => {
       <table>
         <thead>
           <tr>
-            <th className="bg-primary text-white">Background classes</th>
-            <th className="bg-primary text-white">Text Classes</th>
-            <th className="bg-primary text-white">Text Output</th>
-            <th className="bg-primary text-white">Background output</th>
+            <th className="bg-gray-700 text-white">Background Classes</th>
+            <th className="bg-gray-700 text-white">Text Classes</th>
+            <th className="bg-gray-700 text-white">Text Output</th>
+            <th className="bg-gray-700 text-white">Background Output</th>
           </tr>
         </thead>
         <tbody>

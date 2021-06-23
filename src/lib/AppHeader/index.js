@@ -31,11 +31,12 @@ const AppHeader = (props) => {
   const {
     title = 'Demo Page',
     logoSource = 'https://assets-global.website-files.com/5eb0a0358a376a75f540e0ea/605bc8ff5dd0b052c46e6d37_RXP%20group-Endorsed_svg_White.svg',
+    className,
   } = props;
 
   return (
     <AppBar position="fixed" className={classes.appBar}>
-      <Toolbar className={classNames('bg-primary', classes.toolBar)}>
+      <Toolbar className={classNames('bg-primary', classes.toolBar, className)}>
         <div className={classes.logo}>
           <img
             data-testid="image"

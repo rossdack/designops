@@ -37,10 +37,10 @@ const FontSizeDemo = () => {
       <table>
         <thead>
           <tr>
-            <th className="bg-primary text-white">Font Classes</th>
-            <th className="bg-primary text-white">Font Examples</th>
-            <th className="bg-primary text-white">Font Size</th>
-            <th className="bg-primary text-white">Line Height</th>
+            <th className="bg-gray-700 text-white">Font Classes</th>
+            <th className="bg-gray-700 text-white">Font Examples</th>
+            <th className="bg-gray-700 text-white">Font Size</th>
+            <th className="bg-gray-700 text-white">Line Height</th>
           </tr>
         </thead>
         <tbody>
