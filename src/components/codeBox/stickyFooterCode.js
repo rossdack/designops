@@ -1,21 +1,17 @@
 const stickyFooterCode = `
 import React from 'react';
-import {StickyFooter} from "../node_modules/designops/dist/index.js";
+import {StickyFooter} from 'designops';
+
 const StickyFooterDemo = () => {
     return(
         <>
-        <StickyFooter copyright={\`@${new Date().getFullYear()} RXP Group - Part of Capgemini. All rights reserved\`}
-         footerText='Creative agency making happier humans.' position={'left'}>
-            <div>  
-            </div>
+        <StickyFooter copyright={\`@${new Date().getFullYear()} .. ' position={'left'}>
+        ...
         </StickyFooter>
         </>
-    ) 
-
+    )
 }
 
 export default StickyFooterDemo;
-
-
 `;
 export default stickyFooterCode;

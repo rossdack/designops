@@ -1,14 +1,15 @@
 const signInCode = `import React from 'react';
-import {SignIn} from "../node_modules/designops/dist/index.js";
+import { SignIn } from 'designops';
 
 const SignInDemo = () => {
     return(
-        <SignIn firstLabel={'User Name'}/>
-    ) 
-
+        <SignIn 
+          firstLabel={'User Name'}
+          validation="true" 
+          ... />
+    )
 }
 
 export default SignInDemo;
-
 `;
 export default signInCode;
