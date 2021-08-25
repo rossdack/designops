@@ -26,8 +26,8 @@ describe('AppHeader Component', () => {
   });
 
   // Checking alt property should be accessible
-  it('Testing with the RXP logo', () => {
-    const title = 'RXP Group';
+  it('Testing with the Capgemini logo', () => {
+    const title = 'Capgemini';
     const { getByTestId } = createRender();
     expect(getByTestId('image')).toHaveAccessibleName(title);
   });

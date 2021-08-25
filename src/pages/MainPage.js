@@ -24,7 +24,7 @@ const MainPage = (props) => {
   return (
     <div className={classes.root}>
       {/* <AppHeader title="RXP Design Library" /> */}
-      <AppHeader title="RXP Design Library" className="bg-gray-700" />
+      <AppHeader title="Capgemini Design Library" className="bg-gray-700" />
       <NavigationBar {...props} />
       <main className={classes.content}>
         <Toolbar />

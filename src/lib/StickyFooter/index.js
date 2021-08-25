@@ -11,7 +11,7 @@ function Copyright({ copyright }) {
   return (
     <Typography variant="body2" color="textSecondary">
       <Link color="inherit" href="https://www.rxpservices.com/">
-        {copyright ? copyright : 'RXP DesignOps'}
+        {copyright ? copyright : 'Capgemini DesignOps'}
       </Link>
     </Typography>
   );
@@ -54,7 +54,7 @@ export default function StickyFooter({
       <footer className={classNames(classes.footer, classes[position])}>
         <Container fullWidth>
           <Typography variant="body1" data-testid="footer">
-            {footerText ? footerText : 'RXP DesignOps Demo Project'}
+            {footerText ? footerText : 'Capgemini DesignOps Demo Project'}
           </Typography>
           {children}
           <Copyright data-testid="copyright" copyright={copyright} />
