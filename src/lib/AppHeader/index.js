@@ -42,7 +42,7 @@ const AppHeader = (props) => {
             data-testid="image"
             src={logoSource}
             width="150"
-            alt="RXP Group"
+            alt="Capgemini"
           />
         </div>
         <Typography data-testid="title" variant="h6">
