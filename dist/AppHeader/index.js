@@ -75,7 +75,7 @@ var AppHeader = function AppHeader(props) {
           'data-testid': 'image',
           src: logoSource,
           width: '150',
-          alt: 'RXP Group',
+          alt: 'Capgemini',
         }),
       ),
       _react2.default.createElement(
