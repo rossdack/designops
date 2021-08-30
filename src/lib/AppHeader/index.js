@@ -30,7 +30,7 @@ const AppHeader = (props) => {
   const classes = useStyles();
   const {
     title = 'Demo Page',
-    logoSource = 'https://assets-global.website-files.com/5eb0a0358a376a75f540e0ea/605bc8ff5dd0b052c46e6d37_RXP%20group-Endorsed_svg_White.svg',
+    logoSource = 'https://www.workfront.com/sites/default/files/2020-05/Capgemini_white-01.png',
     className,
   } = props;
 
