@@ -42,7 +42,7 @@ function Copyright(_ref) {
     _react2.default.createElement(
       _Link2.default,
       { color: 'inherit', href: 'https://www.rxpservices.com/' },
-      copyright ? copyright : 'RXP DesignOps',
+      copyright ? copyright : 'Capgemini DesignOps',
     ),
   );
 }
@@ -94,7 +94,7 @@ function StickyFooter(_ref2) {
         _react2.default.createElement(
           _Typography2.default,
           { variant: 'body1', 'data-testid': 'footer' },
-          footerText ? footerText : 'RXP DesignOps Demo Project',
+          footerText ? footerText : 'Capgemini DesignOps Demo Project',
         ),
         children,
         _react2.default.createElement(Copyright, {
