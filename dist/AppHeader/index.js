@@ -52,7 +52,7 @@ var AppHeader = function AppHeader(props) {
     _props$logoSource = props.logoSource,
     logoSource =
       _props$logoSource === undefined
-        ? 'https://assets-global.website-files.com/5eb0a0358a376a75f540e0ea/605bc8ff5dd0b052c46e6d37_RXP%20group-Endorsed_svg_White.svg'
+        ? 'https://www.workfront.com/sites/default/files/2020-05/Capgemini_white-01.png'
         : _props$logoSource,
     className = props.className;
 
