@@ -1,44 +1,29 @@
-# Design Library
+# Single-spa app with React and Angular
 
-This project is made to showcase RXP Design Library.
-
-- Visit [Design Library Demo](https://rxpservices.github.io/designops/) to see a live demo
-- Visit [Coupon Demo](https://rxpservices.github.io/demoproj/) to see implementations
-
-## Installation
-
-`npm install` installs project dependencies.
-
-## Development
-
-`npm start` runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-## Project Structure
-
-```
-.
-├── build                   # Compiled files
-├── dist                    # Compiled export components files
-├── src                     # Source files
-│   ├── components
-│   ├── constants
-│   ├── lib                 # Export components files
-│   └── pages
-|
-└── README.md
+## Install the npm packages
+Navigate to the root-config, react-app, and angular-app folders and run the command
+```js
+$ npm install
 ```
 
-## Deployment
+## Run the application
 
-To export components, run `npm build` to compile the components in `/src/lib` to `/dist` folder.
-
-The project hosts on GitHub Pages. With the help of [GitHub Actions](https://github.com/RXPServices/designops/actions), the project runs deployment whenever an update is made to the main branch.
-
-## Development Guide
-
-- Eslint
-- Prettier
-- Feature Branching - naming should follow **feature/initial-descriptive-task** format
-- Code Review - assign a reviewer to pull requests
-- Remove Merged Branches
+- Navigate to the angular-app folder and run the below command
+  ```js
+  $ npm run serve:single-spa:angular-app
+  ```
+- Navigate to the react-app folder and run the below command
+  ```js
+  $ npm start
+  ```
+- Navigate to the root-config folder and run the below command
+  ```js
+  $ npm start
+  ```
+  
+  In the browser open the application at http://localhost:9000
+  
+  Now in the top navigation bar click on **React**, you will be routed to the React app, on click of **Angular** you will be redirected to angular app
+  
+  **http://localhost:9000/react** -> React App
+  **http://localhost:9000/angular/** -> Angular App
