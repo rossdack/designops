@@ -1,6 +1,7 @@
 import React from 'react';
 import '@/lib/designops.css';
 import './index.css';
+import { generateId } from '@/utils/';
 const basicColors = ['transparent', 'black', 'white', 'primary'];
 const colors = [
   'gray',
@@ -14,15 +15,15 @@ const colors = [
 ];
 const getbasicsColors = (colors) => {
   return colors.map((item) => (
-    <tr>
+    <tr key={generateId()}>
       <td>{`.bg-${item}`}</td>
 
       <td>{`.text-${item}`}</td>
       <td>
-        <div class={`text-${item}`}>Aa</div>
+        <div className={`text-${item}`}>Aa</div>
       </td>
       <td>
-        <div class={`box bg-${item}`}></div>
+        <div className={`box bg-${item}`}></div>
       </td>
     </tr>
   ));
@@ -30,14 +31,14 @@ const getbasicsColors = (colors) => {
 const GetColors = ({ color }) => {
   const weights = [50, 100, 200, 300, 400, 500, 600, 700, 800, 900];
   return weights.map((item) => (
-    <tr>
+    <tr key={generateId()}>
       <td>{`.bg-${color}-${item}`}</td>
       <td>{`.text-${color}-${item}`}</td>
       <td>
-        <div class={`text-${color}-${item}`}>Aa</div>
+        <div className={`text-${color}-${item}`}>Aa</div>
       </td>
       <td>
-        <div class={`box bg-${color}-${item}`}></div>
+        <div className={`box bg-${color}-${item}`}></div>
       </td>
     </tr>
   ));
@@ -59,7 +60,7 @@ const ColorPalette = () => {
         <tbody>
           {getbasicsColors(basicColors)}
           {colors.map((item) => (
-            <GetColors color={item} />
+            <GetColors key={generateId()} color={item} />
           ))}
         </tbody>
       </table>
