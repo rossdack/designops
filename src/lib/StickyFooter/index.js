@@ -10,7 +10,7 @@ const classNames = require('classnames');
 function Copyright({ copyright }) {
   return (
     <Typography variant="body2" color="textSecondary">
-      <Link color="inherit" href="https://www.rxpservices.com/">
+      <Link color="inherit" href="https://www.capgemini.com/au-en">
         {copyright ? copyright : 'Capgemini DesignOps'}
       </Link>
     </Typography>
