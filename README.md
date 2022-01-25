@@ -2,8 +2,8 @@
 
 This project is made to showcase RXP Design Library.
 
-- Visit [Design Library Demo](https://rxpservices.github.io/designops/) to see a live demo
-- Visit [Coupon Demo](https://rxpservices.github.io/demoproj/) to see implementations
+- Visit [Design Library Demo](https://github.com/Capgemini-DE/designops/) to see a live demo
+- Visit [Coupon Demo](https://capgemini-de.github.io/demoproj/) to see implementations 
 
 ## Installation
 
@@ -33,7 +33,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 To export components, run `npm build` to compile the components in `/src/lib` to `/dist` folder.
 
-The project hosts on GitHub Pages. With the help of [GitHub Actions](https://github.com/RXPServices/designops/actions), the project runs deployment whenever an update is made to the main branch.
+The project hosts on GitHub Pages. With the help of [GitHub Actions](https://github.com/Capgemini-DE/designops/actions), the project runs deployment whenever an update is made to the main branch.
 
 ## Development Guide
 
