@@ -10,76 +10,36 @@ export default {
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {
     backgroundColor: { control: 'color' },
-    size: { control: 'select', options: ['xs', 'sm', 'md', 'lg'] },
   },
 };
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-const Template = (args) => <CustomModal {...args} />;
-
-export const ExtraSmallModal = () => {
+const Template = (args) => {
   const [openModal, setOpenModal] = React.useState(true);
   const openModalHandler = () => setOpenModal(true);
   const handleSuccess = () => setOpenModal(false);
   const handleClose = () => setOpenModal(false);
+
   return (
-    <Box textAlign="center">
+    <Box style={{ display: 'flex', justifyContent: 'center' }}>
       <Button variant="outlined" color="primary" onClick={openModalHandler}>
-        Extra Small Modal
+        Open Modal
       </Button>
       <CustomModal
-        size="xs"
+        {...args}
         isOpen={openModal}
         handleSuccess={handleSuccess}
         handleClose={handleClose}
-        title="Are you sure you want to exit?"
-        buttonClasses="buttonCss"></CustomModal>
+        children={isForm(args.size, args)}
+      />
     </Box>
   );
 };
 
-export const SmallModal = () => {
-  const [openModal, setOpenModal] = React.useState(true);
-  const openModalHandler = () => setOpenModal(true);
-  const handleSuccess = () => setOpenModal(false);
-  const handleClose = () => setOpenModal(false);
-  return (
-    <Box textAlign="center">
-      <Button variant="outlined" color="primary" onClick={openModalHandler}>
-        Small Modal
-      </Button>
-      <CustomModal
-        isOpen={openModal}
-        size="sm"
-        handleSuccess={handleSuccess}
-        handleClose={handleClose}
-        title="Success!!">
-        User has been created successfully!!
-      </CustomModal>
-    </Box>
-  );
-};
-
-export const MediumModal = () => {
-  const [openModal, setOpenModal] = React.useState(true);
-  const openModalHandler = () => setOpenModal(true);
-  const handleSuccess = () => setOpenModal(false);
-  const handleClose = () => setOpenModal(false);
-  return (
-    <Box textAlign="center">
-      <Button variant="outlined" color="primary" onClick={openModalHandler}>
-        Medium Modal
-      </Button>
-      <CustomModal
-        isOpen={openModal}
-        size="md"
-        handleSuccess={handleSuccess}
-        handleClose={handleClose}
-        title="Subscribe!!">
-        <p>
-          To subscribe to this website, please enter your email address here. We
-          will send updates occasionally.
-        </p>
+const isForm = (size, args) => {
+  if (size === 'md') {
+    return (
+      <div>
         <form>
           <TextField
             id="outlined-basic"
@@ -89,52 +49,40 @@ export const MediumModal = () => {
             fullWidth
           />
         </form>
-      </CustomModal>
-    </Box>
-  );
+      </div>
+    );
+  } else {
+    return args.children;
+  }
 };
 
-export const LargeModal = () => {
-  const [openModal, setOpenModal] = React.useState(true);
-  const openModalHandler = () => setOpenModal(true);
-  const handleSuccess = () => setOpenModal(false);
-  const handleClose = () => setOpenModal(false);
-  return (
-    <Box textAlign="center">
-      <Button variant="outlined" color="primary" onClick={openModalHandler}>
-        Large Modal
-      </Button>
-      <CustomModal
-        isOpen={openModal}
-        size="lg"
-        handleSuccess={handleSuccess}
-        handleClose={handleClose}
-        title="Success!!">
-        <Typography gutterBottom>
-          Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-          dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac
-          consectetur ac, vestibulum at eros.
-        </Typography>
-        <Typography gutterBottom>
-          Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
-          Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
-        </Typography>
-        <Typography gutterBottom>
-          Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus
-          magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec
-          ullamcorper nulla non metus auctor fringilla.
-        </Typography>
-      </CustomModal>
-    </Box>
-  );
-};
-
-export const Overriden = Template.bind({});
+export const ExtraSmallModal = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
-Overriden.args = {
+ExtraSmallModal.args = {
   size: 'xs',
-  isOpen: true,
   title: 'Are you sure you want to exit?',
   buttonClasses: 'buttonCss',
-  children: 'Write content here',
+};
+
+export const SmallModal = Template.bind({});
+// More on args: https://storybook.js.org/docs/react/writing-stories/args
+SmallModal.args = {
+  size: 'sm',
+  title: 'Success!!',
+  children: 'User has been created successfully!!',
+};
+
+export const MediumModal = Template.bind({});
+// More on args: https://storybook.js.org/docs/react/writing-stories/args
+MediumModal.args = {
+  size: 'md',
+  title: 'Subscribe!!',
+};
+
+export const LargeModal = Template.bind({});
+LargeModal.args = {
+  size: 'lg',
+  title: 'Success!!',
+  children:
+    'Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.',
 };
