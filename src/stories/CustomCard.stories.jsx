@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Typography, TextField, Box } from '@material-ui/core';
+import { TextField } from '@material-ui/core';
 import CustomModal from '../lib/CustomModal';
 
 import CustomCard from '../lib/CustomCard';
@@ -14,10 +14,7 @@ export default {
   },
 };
 
-// More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-const Template = (args) => <CustomCard {...args} />;
-
-export const Default = () => {
+const Template = (args) => {
   const [openModal, setOpenModal] = React.useState(false);
   const [modalHeader, setModalHeader] = React.useState('Heading');
   const [subHeader, setSubHeader] = React.useState(
@@ -46,45 +43,11 @@ export const Default = () => {
     setModalHeader(value);
   };
 
-  const cardRows = (init, total) => {
-    let rows = [];
-    for (let i = init; i < total; i++) {
-      rows.push(
-        <CustomCard
-          viewAction={viewAction}
-          editAction={editAction}
-          cardHeading={`Heading ${i}`}
-          cardSubHeading={`I am a Card ${i}`}
-        />,
-      );
-    }
-    return rows;
-  };
-
   return (
-    <div
-      style={{
-        marginLeft: 'auto',
-        marginRight: 'auto',
-      }}>
-      {/* component 1 */}
-      <div
-        style={{
-          display: 'flex',
-          flexDirection: 'row',
-          justifyContent: 'center',
-        }}>
-        {cardRows(1, 6)}
+    <div>
+      <div>
+        <CustomCard {...args} viewAction={viewAction} editAction={editAction} />
       </div>
-      <div
-        style={{
-          display: 'flex',
-          flexDirection: 'row',
-          justifyContent: 'center',
-        }}>
-        {cardRows(6, 11)}
-      </div>
-      {/* component 2*/}
       <CustomModal
         isOpen={openModal}
         size="sm"
@@ -117,21 +80,20 @@ export const Default = () => {
   );
 };
 
-export const Overriden = Template.bind({});
+export const Card = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
-Overriden.args = {
+Card.args = {
   cardHeading: 'Heading',
   cardSubHeading:
     'This is a media card. You can use this section to describe the content.',
 };
 
-Overriden.decorators = [
+Card.decorators = [
   (Story) => (
     <div
       style={{
         height: '350px',
         width: '300px',
-        margin: '10px',
         marginLeft: 'auto',
         marginRight: 'auto',
       }}>
