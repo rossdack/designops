@@ -37,22 +37,27 @@ const Template = (args) => {
 };
 
 const isForm = (size, args) => {
-  if (size === 'md') {
-    return (
-      <div>
-        <form>
-          <TextField
-            id="outlined-basic"
-            label="Email"
-            variant="outlined"
-            type="email"
-            fullWidth
-          />
-        </form>
-      </div>
-    );
-  } else {
-    return args.children;
+  switch (size) {
+    case 'md':
+      return (
+        <div>
+          {args.children}
+          <p></p>
+          <form>
+            <TextField
+              id="outlined-basic"
+              label="Email"
+              variant="outlined"
+              type="email"
+              fullWidth
+            />
+          </form>
+        </div>
+      );
+    case 'lg':
+      return <Typography>{args.children}</Typography>;
+    default:
+      return args.children;
   }
 };
 
@@ -62,6 +67,7 @@ ExtraSmallModal.args = {
   size: 'xs',
   title: 'Are you sure you want to exit?',
   buttonClasses: 'buttonCss',
+  children: '',
 };
 
 export const SmallModal = Template.bind({});
@@ -77,6 +83,8 @@ export const MediumModal = Template.bind({});
 MediumModal.args = {
   size: 'md',
   title: 'Subscribe!!',
+  children:
+    'To subscribe to this website, please enter your email address here. We will send updates occasionally.',
 };
 
 export const LargeModal = Template.bind({});
