@@ -41,7 +41,7 @@
     "url": "https://github.com/somijaiswal23/designops"
   },
   "scripts": {
-    "predeploy": "npm run build-examples",
+    "predeploy": "npm run build-storybook",
     "deploy": "gh-pages -d build",
     "start": "craco start",
     "build-examples": "craco build",
@@ -51,7 +51,8 @@
     "lint": "eslint --fix --ext=js,jsx,ts,tsx . --ignore-path=.gitignore",
     "format": "prettier --write",
     "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public"
+    "deploy-storybook": "gh-pages -d storybook-static",
+    "build-storybook": "build-storybook -o docs-build"
   },
   "eslintConfig": {
     "extends": [
@@ -87,12 +88,12 @@
     "@storybook/addon-interactions": "^6.5.9",
     "@storybook/addon-links": "^6.5.8",
     "@storybook/builder-webpack4": "^6.5.8",
-    "@storybook/jest": "^0.0.10",
+    "@storybook/jest": "0.0.10",
     "@storybook/manager-webpack4": "^6.5.8",
     "@storybook/node-logger": "^6.5.8",
     "@storybook/preset-create-react-app": "^3.2.0",
     "@storybook/react": "^6.5.8",
-    "@storybook/testing-library": "^0.0.13",
+    "@storybook/testing-library": "0.0.13",
     "@testing-library/jest-dom": "^5.14.1",
     "@wojtekmaj/enzyme-adapter-react-17": "^0.6.2",
     "babel-eslint": "^10.1.0",

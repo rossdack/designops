@@ -3,6 +3,9 @@ import { Button, Typography, TextField, Box } from '@material-ui/core';
 
 import CustomModal from '../lib/CustomModal';
 
+import { storiesOf } from '@storybook/react';
+import { action } from '@storybook/addon-actions';
+
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
   title: 'DesignOps/CustomModal',
@@ -66,7 +69,6 @@ export const ExtraSmallModal = Template.bind({});
 ExtraSmallModal.args = {
   size: 'xs',
   title: 'Are you sure you want to exit?',
-  buttonClasses: 'buttonCss',
   children: '',
 };
 
@@ -75,7 +77,7 @@ export const SmallModal = Template.bind({});
 SmallModal.args = {
   size: 'sm',
   title: 'Success!!',
-  children: 'User has been created successfully!!',
+  children: 'User has been created successfully!!!!',
 };
 
 export const MediumModal = Template.bind({});

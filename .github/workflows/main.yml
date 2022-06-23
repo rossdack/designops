@@ -3,7 +3,7 @@ name: Deploy to github pages
 on:
   push:
     branches:
-      - main
+      - storybook
   workflow_dispatch:
 
 jobs:
@@ -15,7 +15,7 @@ jobs:
       - name: Setup Node.js environment
         uses: actions/setup-node@v2.1.5
       - run: npm install
-      - run: npm run build-examples
+      - run: npm run build-storybook
       - name: Deploy
         uses: crazy-max/ghaction-github-pages@v2.3.0
         with:
