@@ -77,7 +77,7 @@ export const SmallModal = Template.bind({});
 SmallModal.args = {
   size: 'sm',
   title: 'Success!!',
-  children: 'User has been created successfully!!!!',
+  children: 'User has been created successfully!!!!!!!!!!',
 };
 
 export const MediumModal = Template.bind({});
