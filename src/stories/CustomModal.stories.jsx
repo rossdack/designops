@@ -84,7 +84,7 @@ export const MediumModal = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
 MediumModal.args = {
   size: 'md',
-  title: 'Subscribe!!',
+  title: 'Subscribe below!!',
   children:
     'To subscribe to this website, please enter your email address here. We will send updates occasionally.',
 };
