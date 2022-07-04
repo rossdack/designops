@@ -80,15 +80,15 @@ const Template = (args) => {
   );
 };
 
-export const Card = Template.bind({});
+export const DefaultCard = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
-Card.args = {
+DefaultCard.args = {
   cardHeading: 'Heading',
   cardSubHeading:
     'This is a media card. You can use this section to describe the content.',
 };
 
-Card.decorators = [
+DefaultCard.decorators = [
   (Story) => (
     <div
       style={{

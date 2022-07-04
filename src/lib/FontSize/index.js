@@ -1,5 +1,5 @@
 import React from 'react';
-import '@/lib/designops.css';
+import '../designops.css';
 import './index.css';
 const sizes = [
   'xs',
@@ -31,7 +31,7 @@ const properties = {
   '8xl': { font: 96, line: 96 },
   '9xl': { font: 128, line: 128 },
 };
-const FontSize = () => {
+const FontSizeDemo = () => {
   return (
     <div className="fontsizes">
       <table>
@@ -62,4 +62,4 @@ const FontSize = () => {
   );
 };
 
-export default FontSize;
+export default FontSizeDemo;
