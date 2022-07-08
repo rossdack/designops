@@ -65,7 +65,7 @@ export const ExtraSmallModal = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
 ExtraSmallModal.args = {
   size: 'xs',
-  title: 'Are you sure you want to exit?',
+  title: 'Are you sure you want to exit????',
   children: '',
 };
 
