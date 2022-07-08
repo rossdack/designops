@@ -7,7 +7,6 @@ on:
   push:
     branches:
       - storybook
-  workflow_dispatch:
 
 jobs:
   build-and-deploy:
@@ -28,4 +27,4 @@ jobs:
           BRANCH: gh-pages # The branch the action should deploy to.
           FOLDER: docs-build # The folder that the build-storybook script generates files.
           CLEAN: true # Automatically remove deleted files from the dxeploy branch
-          TARGET_FOLDER: '/' # The folder that we serve our Storybook files from
+          TARGET_FOLDER: "/" # The folder that we serve our Storybook files from
