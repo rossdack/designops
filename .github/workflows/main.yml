@@ -11,11 +11,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@master
+        uses: actions/checkout@v2.3.1
+        with:
+          persist-credentials: false
       - name: Setup Node.js environment
-        uses: actions/setup-node@v2.1.5
-      - run: npm install
-      - run: npm run build-examples
+        uses: actions/setup-node@v3
+      - name: Install and Build 🔧
+        run: | # Install npm packages and build the Storybook files
+          npm install
+          npm run build-storybook
       - name: Deploy
         uses: crazy-max/ghaction-github-pages@v2.3.0
         with:
