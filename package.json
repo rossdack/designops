@@ -45,7 +45,7 @@
     "deploy": "gh-pages -d build",
     "start": "craco start",
     "build-examples": "craco build",
-    "test": "craco test --env=jsdom",
+    "test": "craco test --coverage --runInBand --watchAll=false",
     "eject": "react-scripts eject",
     "build": "set NODE_ENV=production && rm -rf dist && mkdir dist && npx babel src/lib --out-dir dist --copy-files",
     "lint": "eslint --fix --ext=js,jsx,ts,tsx . --ignore-path=.gitignore",

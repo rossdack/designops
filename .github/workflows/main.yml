@@ -11,19 +11,32 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@master
+        uses: actions/checkout@v3.0.2
+        with:
+          persist-credentials: false
+
       - name: Setup Node.js environment
-        uses: actions/setup-node@v2.1.5
-      - run: npm install
-      - run: npm run build-examples
+        uses: actions/setup-node@v3
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run unit tests
+        run: npm run test
+
+      - name: Build Storybook 🔧
+        run: npm run build-storybook
+
       - name: Deploy
         uses: crazy-max/ghaction-github-pages@v2.3.0
         with:
           build_dir: build
         env:
           GITHUB_TOKEN: ${{ secrets.PA_TOKEN }}
+
       - run: |
           curl -XPOST -u "${{ secrets.PA_USERNAME}}:${{secrets.PA_TOKEN}}" -H "Accept: application/vnd.github.everest-preview+json" -H "Content-Type: application/json" https://api.github.com/repos/RXPServices/demoproj/dispatches --data '{"event_type": "build_application"}'
+
       - name: Send Teams Notification
         if: success()
         uses: aliencube/microsoft-teams-actions@v0.8.0
