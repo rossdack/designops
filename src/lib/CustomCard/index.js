@@ -28,6 +28,8 @@ const useStyles = makeStyles((theme) => ({
     height: '100%',
     display: 'flex',
     flexDirection: 'column',
+    width: '300px',
+    margin: '10px',
   },
   cardMedia: {
     paddingTop: '56.25%', // 16:9
@@ -60,12 +62,7 @@ const CustomCard = (props) => {
   const classes = useStyles();
 
   return (
-    <Card
-      style={{
-        width: '300px',
-        margin: '10px',
-      }}
-      className={classNames(classes.card, cardClasses)}>
+    <Card className={classNames(classes.card, cardClasses)}>
       <CardMedia
         className={classNames(classes.cardMedia, cardMediaClasses)}
         image={img ? img : 'https://source.unsplash.com/random'}
