@@ -1,5 +1,4 @@
 import React from 'react';
-
 import StickyFooter from '../lib/StickyFooter';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
@@ -17,9 +16,7 @@ const Template = (args) => <StickyFooter {...args} />;
 
 export const DefaultSettings = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
-DefaultSettings.args = {
-
-};
+DefaultSettings.args = {};
 
 export const Overridden = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
@@ -27,7 +24,5 @@ Overridden.args = {
   copyright: 'Copyright Text',
   footerText: 'Footer Text',
   position: 'left',
-  children: ''
+  children: '',
 };
-
-

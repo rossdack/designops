@@ -1,5 +1,4 @@
 import React from 'react';
-
 import FontSize from '../lib/FontSize/index.js';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export

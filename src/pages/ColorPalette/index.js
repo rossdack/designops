@@ -46,8 +46,6 @@ const GetColors = ({ color }) => {
 const ColorPalette = () => {
   return (
     <div className="colorPalette ">
-      {/* <div className="box bg-black"></div>
-        <div>bg-black</div> */}
       <table>
         <thead>
           <tr>

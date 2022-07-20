@@ -1,5 +1,4 @@
 import React from 'react';
-
 import SignIn from '../lib/SignIn';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export

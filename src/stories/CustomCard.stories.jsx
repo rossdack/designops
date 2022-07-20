@@ -1,4 +1,4 @@
-import React from 'react';
+import { React, useState } from 'react';
 import { TextField } from '@material-ui/core';
 import CustomModal from '../lib/CustomModal';
 
@@ -15,13 +15,13 @@ export default {
 };
 
 const Template = (args) => {
-  const [openModal, setOpenModal] = React.useState(false);
-  const [modalHeader, setModalHeader] = React.useState('Heading');
-  const [subHeader, setSubHeader] = React.useState(
+  const [openModal, setOpenModal] = useState(false);
+  const [modalHeader, setModalHeader] = useState('Heading');
+  const [subHeader, setSubHeader] = useState(
     'This is a media card. You can use this section to describe the content.',
   );
-  const [hideCancel, sethideCancel] = React.useState(true);
-  const [isEdit, setIsEdit] = React.useState(false);
+  const [hideCancel, sethideCancel] = useState(true);
+  const [isEdit, setIsEdit] = useState(false);
 
   const handleSuccess = () => setOpenModal(false);
   const handleClose = () => setOpenModal(false);

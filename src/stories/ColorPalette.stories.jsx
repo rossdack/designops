@@ -1,5 +1,4 @@
 import React from 'react';
-
 import ColorPalette from '../lib/ColorPalette/index.js';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export

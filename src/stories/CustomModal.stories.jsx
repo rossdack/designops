@@ -1,6 +1,5 @@
-import React from 'react';
+import { React, useState } from 'react';
 import { Button, Typography, TextField, Box } from '@material-ui/core';
-
 import CustomModal from '../lib/CustomModal';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
@@ -15,7 +14,7 @@ export default {
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
 const Template = (args) => {
-  const [openModal, setOpenModal] = React.useState(true);
+  const [openModal, setOpenModal] = useState(true);
   const openModalHandler = () => setOpenModal(true);
   const handleSuccess = () => setOpenModal(false);
   const handleClose = () => setOpenModal(false);

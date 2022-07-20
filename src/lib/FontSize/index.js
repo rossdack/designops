@@ -45,7 +45,7 @@ const FontSizeDemo = () => {
         </thead>
         <tbody>
           {sizes.map((item) => (
-            <tr>
+            <tr key={`${item}`}>
               <td className="width15">{`.text-${item}`}</td>
               <td>
                 <div className={`text-${item} ellipses`}>
