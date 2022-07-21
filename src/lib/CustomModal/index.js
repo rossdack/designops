@@ -56,7 +56,7 @@ const DialogActions = withStyles((theme) => ({
  */
 const CustomModal = ({
   isOpen,
-  size = 'md',
+  size = '',
   handleClose,
   title,
   handleSuccess,

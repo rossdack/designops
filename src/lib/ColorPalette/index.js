@@ -1,7 +1,13 @@
 import React from 'react';
-import '@/lib/designops.css';
+import '../designops.css';
 import './index.css';
-import { generateId } from '@/utils/';
+
+function generateId(prefix = '_') {
+  return `${prefix}${Math.floor((1 + Math.random()) * 0x1000)
+    .toString(16)
+    .substring(1)}`;
+}
+
 const basicColors = ['transparent', 'black', 'white', 'primary'];
 const colors = [
   'gray',

@@ -163,12 +163,12 @@ export default function SignInSide({ firstLabel, handleClick, validation }) {
             </Button>
             <Grid container>
               <Grid item xs>
-                <Link href="#" variant="body2" onClick={handleForgotPassword}>
+                <Link variant="body2" onClick={handleForgotPassword}>
                   Forgot password?
                 </Link>
               </Grid>
               <Grid item>
-                <Link href="#" variant="body2" onClick={handleSignUp}>
+                <Link variant="body2" onClick={handleSignUp}>
                   {"Don't have an account? Sign Up"}
                 </Link>
               </Grid>

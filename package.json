@@ -17,6 +17,7 @@
     "@craco/craco": "^6.1.2",
     "@material-ui/core": "^4.11.3",
     "@material-ui/icons": "^4.11.2",
+    "@storybook/cli": "^6.5.8",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "D": "^1.0.0",
@@ -40,19 +41,32 @@
     "url": "https://github.com/somijaiswal23/designops"
   },
   "scripts": {
-    "predeploy": "npm run build-examples",
+    "predeploy": "npm run build-storybook",
     "deploy": "gh-pages -d build",
     "start": "craco start",
     "build-examples": "craco build",
-    "test": "craco test --env=jsdom",
+    "test": "craco test --coverage --runInBand --watchAll=false",
     "eject": "react-scripts eject",
     "build": "set NODE_ENV=production && rm -rf dist && mkdir dist && npx babel src/lib --out-dir dist --copy-files",
     "lint": "eslint --fix --ext=js,jsx,ts,tsx . --ignore-path=.gitignore",
-    "format": "prettier --write"
+    "format": "prettier --write",
+    "storybook": "start-storybook -p 6006 -s public",
+    "deploy-storybook": "gh-pages -d storybook-static",
+    "build-storybook": "build-storybook -o docs-build"
   },
   "eslintConfig": {
     "extends": [
       "react-app"
+    ],
+    "overrides": [
+      {
+        "files": [
+          "**/*.stories.*"
+        ],
+        "rules": {
+          "import/no-anonymous-default-export": "off"
+        }
+      }
     ]
   },
   "browserslist": {
@@ -69,6 +83,17 @@
   },
   "devDependencies": {
     "@babel/preset-react": "^7.14.5",
+    "@storybook/addon-actions": "^6.5.8",
+    "@storybook/addon-essentials": "^6.5.8",
+    "@storybook/addon-interactions": "^6.5.9",
+    "@storybook/addon-links": "^6.5.8",
+    "@storybook/builder-webpack4": "^6.5.8",
+    "@storybook/jest": "0.0.10",
+    "@storybook/manager-webpack4": "^6.5.8",
+    "@storybook/node-logger": "^6.5.8",
+    "@storybook/preset-create-react-app": "^3.2.0",
+    "@storybook/react": "^6.5.8",
+    "@storybook/testing-library": "0.0.13",
     "@testing-library/jest-dom": "^5.14.1",
     "@wojtekmaj/enzyme-adapter-react-17": "^0.6.2",
     "babel-eslint": "^10.1.0",
